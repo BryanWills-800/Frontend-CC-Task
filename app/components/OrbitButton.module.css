@@ -1,0 +1,53 @@
+.orbit-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 208px;
+    height: 56px;
+    /* Removed border-radius: 9999px for square corners */
+    background: rgba(8, 12, 24, 0.65);
+    /* Solid border instead of rounded */
+    border: 2px solid rgba(34, 211, 238, 0.6);
+    backdrop-filter: blur(6px);
+    color: rgb(204, 251, 241);
+    font-family: ui-monospace, SFMono-Regular, 'SF Mono', monospace;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    overflow: visible;
+    transition: all 500ms ease;
+}
+
+/* This adds the corner brackets */
+.orbit-btn::before,
+.orbit-btn::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border: 3px solid #22d3ee;
+}
+
+.orbit-btn::before {
+    top: -5px;
+    left: -5px;
+    border-right: none;
+    border-bottom: none;
+}
+
+.orbit-btn::after {
+    bottom: -5px;
+    right: -5px;
+    border-left: none;
+    border-top: none;
+}
+
+/* Adjusting hover state to match */
+.orbit-btn:hover {
+    background: rgba(20, 184, 166, 0.15);
+    box-shadow: 0 0 20px rgba(34, 211, 238, 0.3);
+}

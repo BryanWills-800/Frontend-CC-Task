@@ -1,0 +1,51 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+:root {
+  --background: #000000;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #ffffff;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@theme {
+  --animate-orbit: orbit 2.5s linear infinite;
+}
+
+@keyframes orbit {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@layer components {
+  .orbit-btn {
+    @apply relative flex items-center justify-center bg-[#080c18]/65 border-2 border-cyan-400/60 backdrop-blur-[6px] transition-all;
+    width: 208px;
+    height: 56px;
+    color: rgb(204, 251, 241);
+    font-family: ui-monospace, SFMono-Regular, 'SF Mono', monospace;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    overflow: visible;
+  }
+}

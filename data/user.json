@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Admin",
+        "role": "Admin",
+        "email": "admin@example.com",
+        "password": "password123"
+    },
+    {
+        "name": "BRYAN WILLS",
+        "role": "User",
+        "email": "f20250687@pilani.bits-pilani.ac.in",
+        "password": "1234"
+    },
+    {
+        "name": "Vinita",
+        "role": "User",
+        "email": "vinitawills@gmail.com",
+        "password": "abcdef"
+    }
+]
