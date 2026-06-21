@@ -222,7 +222,7 @@ export default function HomePage() {
             }
           `}</style>
 
-          {/* Enter Orbit Button */}
+          {/* Login Button */}
           <Link
             href="/dashboard"
             prefetch={false}
@@ -230,7 +230,7 @@ export default function HomePage() {
             className="orbit-btn group w-[208px] h-[56px] rounded-full hover:w-[56px] duration-600 ease-[cubic-bezier(0.65,0,0.35,1)]"
           >
             <span className="text-teal-100 font-mono text-sm tracking-[0.18em] uppercase transition-all group-hover:opacity-0 group-hover:scale-75">
-              Enter Orbit
+              Login
             </span>
             <span className="orbit-ring" />
 

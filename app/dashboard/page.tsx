@@ -100,8 +100,8 @@ export default function DashboardPage() {
       </section>
 
       <section className="mb-6">
-        <h2 className="text-2xl font-semibold">
-          Current ISS Status
+        <h2 className="text-2xl font-semibold text-white">
+          Live ISS Status
         </h2>
 
         {error && (
