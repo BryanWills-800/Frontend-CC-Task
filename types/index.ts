@@ -9,7 +9,7 @@ export interface ISSLocation {
 }
 
 export interface TelemetryExportRecord {
-  timestamp: number;
+  timestamp: string;
   latitude: number;
   longitude: number;
   altitude: number;

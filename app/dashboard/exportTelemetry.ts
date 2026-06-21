@@ -53,7 +53,7 @@ export function formatTelemetryTimestamp(timestamp: number) {
 
 function normalizeTelemetry(history: ISSLocation[]): TelemetryExportRecord[] {
   return [...history].reverse().map((record) => ({
-    timestamp: record.timestamp,
+    timestamp: formatTelemetryTimestamp(record.timestamp),
     latitude: record.latitude,
     longitude: record.longitude,
     altitude: record.altitude,
