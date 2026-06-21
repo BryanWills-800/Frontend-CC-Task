@@ -73,7 +73,9 @@ export default function DashboardPage() {
           <h1 className="text-3xl font-bold">
             ISS Telemetry Dashboard
           </h1>
-          <p>Live International Space Station location data.</p>
+          <p className="text-white">
+            Live International Space Station location data.
+          </p>
         </div>
 
         <ControlButtons
@@ -103,7 +105,9 @@ export default function DashboardPage() {
         </h2>
 
         {error && (
-          <p className="text-red-500 mt-2">{error}</p>
+          <p className="mt-2 rounded border border-red-400 bg-red-900/80 px-4 py-3 text-red-100">
+            {error}
+          </p>
         )}
 
         {latestData ? (
@@ -142,7 +146,7 @@ export default function DashboardPage() {
               </tbody>
             </table>
 
-            <nav className="mt-4 flex items-center gap-4">
+            <nav className="mt-4 flex items-center gap-4 text-white">
               <button
                 className="border px-4 py-2 disabled:opacity-50"
                 disabled={page === 1}
@@ -165,7 +169,7 @@ export default function DashboardPage() {
             </nav>
           </>
         ) : (
-          <p className="mt-4">Loading ISS data...</p>
+          <p className="mt-4 text-white">Loading ISS data...</p>
         )}
       </section>
     </main>
