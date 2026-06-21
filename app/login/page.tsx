@@ -3,13 +3,11 @@
 import React, { useState } from "react";
 import Button from "@/app/components/Button";
 import { useAuth } from "@/app/context/AuthContext";
-import { useRouter } from "next/navigation";
 import { getSingleUser } from "@/app/lib/userService";
 
 
 export default function LoginPage() {
   const { login } = useAuth();
-  const router = useRouter();
 
   const [error, setError] = useState("");
 
@@ -45,7 +43,7 @@ export default function LoginPage() {
             }
 
             await login(email, password);
-            router.push("/dashboard");
+            window.location.replace("/dashboard");
           }}
           className="space-y-4"
         >

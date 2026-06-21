@@ -1,14 +1,12 @@
 "use client";
 
 import React, { useState } from "react";
-import { useRouter } from "next/navigation";
 import Button from "@/app/components/Button";
 import { useAuth } from "@/app/context/AuthContext";
 import { createUser, getSingleUser } from "@/app/lib/userService";
 
 
 export default function SignUpPage() {
-  const router = useRouter();
   const { login } = useAuth();
 
   const [error, setError] = useState("");
@@ -50,7 +48,7 @@ export default function SignUpPage() {
             setError("");
 
             await login(email, password);
-            router.push("/dashboard");
+            window.location.replace("/dashboard");
           }}
           className="space-y-4"
         >

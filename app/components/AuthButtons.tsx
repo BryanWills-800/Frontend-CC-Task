@@ -3,6 +3,7 @@
 import LoginButton from "./LoginButton";
 import SignUpButton from "./SignUpButton";
 import LogoutButton from "./LogoutButton";
+import DeleteAccountButton from "./DeleteAccountButton";
 import { useAuth } from "@/app/context/AuthContext";
 
 export default function AuthButtons() {
@@ -14,7 +15,10 @@ export default function AuthButtons() {
     return (
         <div className={containerClasses}>
             {isLoggedIn ? (
-                <LogoutButton />
+                <div className="flex items-center gap-3">
+                    <LogoutButton />
+                    <DeleteAccountButton />
+                </div>
             ) : (
                 <>
                     <div className="px-4">

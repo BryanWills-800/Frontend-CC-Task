@@ -14,7 +14,7 @@ export async function getAllUsers(): Promise<User[]> {
             return [];
         }
 
-        return JSON.parse(data);
+        return JSON.parse(data.replace(/^\uFEFF/, ""));
     } catch (error) {
         console.error("Error in getAllUsers:", error);
         return [];
@@ -47,6 +47,12 @@ export async function deleteUser(user: User): Promise<boolean> {
     try {
         const users = await getAllUsers();
         const filteredUsers = users.filter((u: User) => u.email !== user.email);
+        const wasDeleted = filteredUsers.length !== users.length;
+
+        if (!wasDeleted) {
+            return false;
+        }
+
         await fs.promises.writeFile(userFilePath, JSON.stringify(filteredUsers, null, 2));
         return true;
     } catch (error) {

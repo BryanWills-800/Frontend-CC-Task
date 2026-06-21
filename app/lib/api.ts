@@ -2,6 +2,7 @@ import axios from "axios";
 
 export const authApi = axios.create({
     baseURL: "/api/auth",
+    withCredentials: true,
     headers: {
         Accept: "application/json",
         "Content-Type": "application/json",

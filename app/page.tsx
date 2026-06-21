@@ -224,7 +224,8 @@ export default function HomePage() {
 
           {/* Enter Orbit Button */}
           <Link
-            href="/login"
+            href="/dashboard"
+            prefetch={false}
             /* We use the custom CSS class combined with Tailwinds */
             className="orbit-btn group w-[208px] h-[56px] rounded-full hover:w-[56px] duration-600 ease-[cubic-bezier(0.65,0,0.35,1)]"
           >

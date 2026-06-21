@@ -53,6 +53,14 @@ export function AuthProvider({
         setEmail(null);
     };
 
+    const deleteAccount = async () => {
+        await authApi.delete("/account", {
+            validateStatus: (status) => status < 500,
+        });
+        setIsLoggedIn(false);
+        setEmail(null);
+    };
+
     return (
         <AuthContext.Provider
             value={{
@@ -60,6 +68,7 @@ export function AuthProvider({
                 email,
                 login,
                 logout,
+                deleteAccount,
             }}
         >
             {children}

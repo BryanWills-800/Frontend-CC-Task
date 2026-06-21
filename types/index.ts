@@ -31,6 +31,7 @@ export interface AuthContextType {
   email: string | null;
   login: (email: string, password: string) => Promise<void>;
   logout: () => Promise<void>;
+  deleteAccount: () => Promise<void>;
 }
 
 export interface AuthProviderProps {
